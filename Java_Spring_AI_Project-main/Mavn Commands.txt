@@ -1,0 +1,29 @@
+mvn clean
+mvn dependency:resolve
+mvn spring-boot:run
+
+
+
+
+.\mvnw.cmd spring-boot:run -Dspring-boot.run.jvmArguments="-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000"
+
+
+
+Launcher.json file
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "SpringAiDemoApplication",
+            "request": "launch",
+            "mainClass": "com.cm.spring_ai_demo.SpringAiDemoApplication",
+            "projectName": "spring-ai-demo",
+            "env": {
+                "GEMINI_API_KEY": "AIzaSyCgmuTOvNtvr5_wnyO7AFkVoei5EU",
+                "GOOGLE_PROJECT_ID": "gen-lang-client-0813287 "
+            }
+        }
+    ]
+}
