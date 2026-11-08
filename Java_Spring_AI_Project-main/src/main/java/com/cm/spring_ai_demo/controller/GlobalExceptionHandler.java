@@ -31,11 +31,14 @@ public class GlobalExceptionHandler {
      */
     @ExceptionHandler(Exception.class)
     public ResponseEntity<Map<String, String>> handleGenericException(Exception ex) {
+        String causeMessage = (ex.getCause() != null && ex.getCause().getMessage() != null) 
+                ? ex.getCause().getMessage() 
+                : ex.getMessage();
         return ResponseEntity
                 .status(HttpStatus.INTERNAL_SERVER_ERROR)
                 .body(Map.of(
                         "status", "error",
-                        "message", "An unexpected error occurred: " + ex.getMessage(),
+                        "message", "An unexpected error occurred: " + ex.getMessage() + (ex.getCause() != null ? " (" + causeMessage + ")" : ""),
                         "code", "INTERNAL_ERROR"
                 ));
     }
