@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: omni-ai-rag-app
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    envVars:
+      - key: PORT
+        value: 10000
+      - key: GOOGLE_API_KEY
+        sync: false
+      - key: GOOGLE_PROJECT_ID
+        value: refined-signer-513112-j7
+
