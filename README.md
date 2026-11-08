@@ -117,3 +117,6 @@ src/main/java/com/cm/spring_ai_demo/
 ## 📜 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/4a28da7b-5f07-43d5-b33a-94846e341bbc" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/605668ef-5941-4376-ad61-6f3d806eb912" />
